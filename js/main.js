@@ -5,6 +5,9 @@ function energyQuest (){
 	var gameData;
 
 	function resetGameData(){
+			for (var i=0; i<25; i++){
+				$('#c' + i).html("");
+			}
 
 		gameData = {
 			energy: 50,
@@ -35,10 +38,8 @@ function energyQuest (){
 			$('#startGame').removeClass('hidden');
 			$('#gameWrapper').addClass('hidden');
 			resetGameData();
-			for (var i=0; i<25; i++){
-				$('#c' + i).html("");
-			}
-			CurrentGame="";		
+			CurrentGame="";
+			$(document).off("keyup");		
 	}
 
 	function newCell(newPositionDiff) {
@@ -81,8 +82,8 @@ function energyQuest (){
 	writeEnergyLevel();
 
 	//Start listening for keypresses
-	$(document).keyup(function(e){
-		console.log(e.keyCode);
+	$(document).on("keyup",function(e){
+			console.log(e.keyCode);
   	  switch (e.keyCode) {
         case 40:
             console.log('down');
@@ -121,8 +122,7 @@ function energyQuest (){
             }
             break;
         case 81:
-        	$('#energyLevel').html("Game over, final Energy Level: " + gameData.energy);
-			$('#startGame').removeClass('hidden');
+			finishGame();
         	break;
         default:
             console.log('???');  
@@ -131,6 +131,5 @@ function energyQuest (){
 
 	$('#gameWrapper').removeClass('hidden');
 	$('#startGame').addClass('hidden');
-
 
 }
