@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+        <style  type="text/css" >
+            .gameCell {width:50px; height: 50px; border:1px solid #000; float:left; display:block;}
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <h1>Energy Quest</h1>
+
+        <p>Use your arrow keys to find the energy.  Press q to quit at anytime.</p>
+        <p id="buttons">
+            <a href="#" id="startGame" onclick="javascript:CurrentGame= new energyQuest();">Click here to start a new game</a>
+        </p>
+        
+        <div id="gameWrapper" class="hidden">
+            <p id="energyLevel"></p>
+            <div class="clearfix">
+                <div class="span2 gameCell" id="c1"></div>
+                <div class="span2 gameCell" id="c2"></div>
+                <div class="span2 gameCell" id="c3"></div>
+                <div class="span2 gameCell" id="c4"></div>
+                <div class="span2 gameCell" id="c5"></div>
+            </div>
+            <div class="clearfix">
+                <div class="span2 gameCell" id="c6"></div>
+                <div class="span2 gameCell" id="c7"></div>
+                <div class="span2 gameCell" id="c8"></div>
+                <div class="span2 gameCell" id="c9"></div>
+                <div class="span2 gameCell" id="c10"></div>
+            </div>
+            <div class="clearfix">
+                <div class="span2 gameCell" id="c11"></div>
+                <div class="span2 gameCell" id="c12"></div>
+                <div class="span2 gameCell" id="c13"></div>
+                <div class="span2 gameCell" id="c14"></div>
+                <div class="span2 gameCell" id="c15"></div>
+            </div>
+            <div class="clearfix">
+                <div class="span2 gameCell" id="c16"></div>
+                <div class="span2 gameCell" id="c17"></div>
+                <div class="span2 gameCell" id="c18"></div>
+                <div class="span2 gameCell" id="c19"></div>
+                <div class="span2 gameCell" id="c20"></div>
+            </div>
+            <div class="clearfix">
+                <div class="span2 gameCell" id="c21"></div>
+                <div class="span2 gameCell" id="c22"></div>
+                <div class="span2 gameCell" id="c23"></div>
+                <div class="span2 gameCell" id="c24"></div>
+                <div class="span2 gameCell" id="c25"></div>
+            </div>
+        </div>
+
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>
